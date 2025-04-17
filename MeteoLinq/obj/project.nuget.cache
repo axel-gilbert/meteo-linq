@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2xUKLBIcNpo=",
+  "success": true,
+  "projectFilePath": "/Users/axel/Documents/IPI/workspace/meteo-linq/MeteoLinq/MeteoLinq.csproj",
+  "expectedPackageFiles": [
+    "/Users/axel/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512",
+    "/Users/axel/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
