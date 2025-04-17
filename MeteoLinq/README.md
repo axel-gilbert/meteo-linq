@@ -4,7 +4,7 @@ Cette application console en C# récupère les prévisions météorologiques pou
 
 ## Fonctionnalités
 
-- **Récupération des données** : Obtention des prévisions météorologiques de Toulouse via l'API OpenWeatherMap
+- **Récupération des données** : Obtention des prévisions météorologiques de Toulouse via l'API Open-Meteo (gratuite et sans clé API)
 - **Filtrage des données** : 
   - Par date
   - Par plage de dates
@@ -19,11 +19,16 @@ Cette application console en C# récupère les prévisions météorologiques pou
   - Température moyenne par jour
   - Température maximale par jour
   - Température minimale par jour
-- **Affichage des données** : Visualisation des données avec pagination
+- **Affichage des données** : 
+  - Visualisation des données avec pagination
+  - Affichage automatique après chaque filtrage ou tri
 - **Exportation des données** :
   - Format JSON
   - Format CSV
   - Possibilité de sélectionner les champs à exporter
+- **Réinitialisation** :
+  - Réinitialisation des filtres
+  - Réinitialisation de tous les filtres et tris
 
 ## Prérequis
 
@@ -50,7 +55,9 @@ L'application présente une interface console simple avec des menus pour navigue
 1. Au démarrage, l'application charge les données météorologiques pour Toulouse.
 2. Utilisez le menu principal pour choisir l'action à effectuer.
 3. Suivez les instructions à l'écran pour filtrer, trier, regrouper ou exporter les données.
-4. Pour quitter l'application, sélectionnez l'option "0" dans le menu principal.
+4. Les résultats s'affichent automatiquement après chaque opération de filtrage ou de tri.
+5. Pour réinitialiser tous les filtres et tris, utilisez l'option dédiée dans le menu principal.
+6. Pour quitter l'application, sélectionnez l'option "0" dans le menu principal.
 
 ## Structure du projet
 
@@ -78,6 +85,7 @@ var weatherGroups = data.GroupBy(d => d.GetWeatherDescription());
 
 ## Remarques
 
-- L'application utilise une API gratuite d'OpenWeatherMap qui fournit les prévisions sur 5 jours.
+- L'application utilise l'API gratuite Open-Meteo qui fournit les prévisions sur 7 jours.
 - Les données sont actualisées à chaque démarrage de l'application.
-- Les exports sont sauvegardés dans le répertoire d'exécution de l'application. 
+- Les exports sont sauvegardés dans le répertoire d'exécution de l'application.
+- L'interface affiche automatiquement les résultats après chaque action de filtrage ou de tri. 
